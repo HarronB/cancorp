@@ -5,5 +5,5 @@ class Product < ApplicationRecord
   has_many :orders, through: :order_products
 
   validates :name, :price, :description, presence: true
-  validates :win, :loss, numericality: { only_integer: true }
+  validates :price, numericality: { only_integer: true }
 end
