@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2019-04-03 22:24:02
+  confirmation: 1
+  customer: one
+
+two:
+  date: 2019-04-03 22:24:02
+  confirmation: 1
+  customer: two
