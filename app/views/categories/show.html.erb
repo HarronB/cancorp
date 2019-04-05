@@ -6,3 +6,10 @@
 
 
 <h2><%= @category.name %> </h2>
+
+  <ul>
+    <% @category.products.each do |prod|%>
+      <li> <%= link_to prod.name, prod%> </li>
+    <%end%>
+  </ul>
+

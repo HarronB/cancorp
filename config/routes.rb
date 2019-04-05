@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   # create the index and show restful routes
-  resources :product, only: %i[index show]
+  resources :products, only: %i[index show]
   resources :customers, only: %i[index show]
   resources :orders, only: %i[index show]
   resources :categories, only: %i[index show]

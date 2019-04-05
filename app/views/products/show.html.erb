@@ -4,6 +4,35 @@
 
 
 
-<h2><%= @product.name %> </h2>
+<h1><%=@product.name %>    ----    </h1>
+<%#   -------  link_to product.categories.name, product.categories %>
+
+
+<%# image here %>
+
+<h3> Details </h3>
+<h4> <%= @product.price%> </h4>
+<h4> <%= @product.description%> </h4>
+
+
+
+<br>
+<br>
+<br>
+
+
+
+<p>
+<% @product.categories.each do |product|%>
+  <ul>
+    <li> <%= link_to product.name, product%> </li>
+  </ul>
+<%end%>
+</p>
+
+
+
+
+<%# can include number of times ordered.      product.orders.count %>
 
 
