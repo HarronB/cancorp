@@ -14,27 +14,18 @@ Customer.destroy_all
 Product.destroy_all
 Category.destroy_all
 
-
-
 # can only ask for what they have
 # if they have 8 housees, can only call for 8 qunieq
 # to use faker properly we must modiy the GEM files   VIEW GEM FILE FOR HOW
 3.times do
-
-
   cat = Category.create(name: Faker::Cannabis.unique.type)
 
   5.times do
-     cat.products.create(name: Faker::Cannabis.unique.strain,
-                            price: Faker::Number.between(10, 20),
-                            description: Faker::Cannabis.unique.health_benefit)
+    cat.products.create(name: Faker::Cannabis.unique.strain,
+                        price: Faker::Commerce.price(range = 6..12.0, as_string = false),
+                        description: Faker::Cannabis.unique.health_benefit)
   end
-
 end
-
-
-
-
 
 puts "Number of products: #{Product.count}"
 puts "Number of cats: #{Category.count}"

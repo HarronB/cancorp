@@ -3,8 +3,12 @@
 
 
 <h2> List of Products </h2>
-<ul>
+
   <% @products.each do |product| %>
-    <li> <%= link_to product.name, product%>  ---- <%= product.category.name%> </li>
+    <div class ="prods">
+    <h3> <%= link_to product.name, product%>  ---- <%= link_to product.category.name, product.category%> </h3>
+    <p> Price: <%= number_to_currency product.price%> </p>
+    <p> Desc:  <%= product.description%>   </p>
+    </div>
   <% end%>
-</ul>
+
