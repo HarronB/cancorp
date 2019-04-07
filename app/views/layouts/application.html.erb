@@ -24,7 +24,7 @@
 						    <%= form_tag(search_results_path, method: "get") do %>
 						      <%= label_tag(:query, "Search for:") %>
 						      <%= text_field_tag(:query) %>
-                  <%= select_tag 'category', options_for_select(Category.all.map{|el| [el.name, el.id]}) %>
+                  <%= select_tag(:queryc, options_for_select(Category.all.map{|cat| [cat.name, cat.id]})) %>
 						      <%= submit_tag("Search") %>
 						    <% end %>
 <br><br>
