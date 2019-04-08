@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   resources :orders, only: %i[index show]
   resources :categories, only: %i[index show]
 
-  get 'search_results', to: 'search#results', as: 'search_results'
-
+  get 'search_results', to: 'search#results', as: 'search_results' # route for seach results
+  get 'static/:permalink', to: 'pages#static', as: 'static'
   root to: 'products#index' # root to products controller index action
 end
