@@ -2,14 +2,8 @@
 <p>Find me in app/views/search/results.html.erb</p>
 
 
+<h2>Search for "<%= @query %>" returned <%= pluralize(@products.size, 'result') %>.</h2>
 
-  <% @products.each do |product| %>
-    <div class ="prods">
-    <h3> <%= link_to product.name, product%>  ---- <%= link_to product.category.name, product.category%> </h3>
-    <p> Price: <%= number_to_currency product.price%> </p>
-    <p> Desc:  <%= product.description%>   </p>
-    </div>
-  <% end%>
-
+<%= render partial: 'products/product', collection:@products, locals: {show_links: false} %>
 
   <%= @queryc%>

@@ -2,21 +2,14 @@
 <p>Find me in app/views/products/show.html.erb</p>
 
 
+<!-- <%= render @product%> -->
 
+          <!-- <%= render partial: 'products/product',
+                      object: @product %>    -->
 
-<h1><%=@product.name %>    ---- <%= link_to  @product.category.name, controller: "categories", action: "show", id: @product.category.id%>   </h1>
-<%#   -------  link_to product.categories.name, product.categories %>
-
-
-
-
-<%# image here %>
-
-<h3> Details </h3>
-<h4> <%= @product.price%> </h4>
-<h4> <%= @product.description%> </h4>
-
-
+           <%= render partial: 'products/product',
+                      object: @product,
+                      locals: {show_links: false} %>
 
 <br>
 <br>
