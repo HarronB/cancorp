@@ -5,7 +5,10 @@
 <h2> List of Products </h2>
 
 
-<%= render @products %>
+
+           <%= render partial: 'products/product',
+                      collection: @products,
+                      locals: {show_links: true} %>
 
 
 

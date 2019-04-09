@@ -1,8 +1,15 @@
 
 
     <div class ="prods">
-    <h3> <%=link_to product.name, product%>
-    <p> <%= link_to product.category.name, product.category%>
-    <p> Price: <%= number_to_currency product.price%> </p>
-    <p> Desc:  <%= product.description%>   </p>
+      <% if show_links %>
+          <h3> <%=link_to product.name, product%>
+          <p> <%= link_to product.category.name, product.category%>
+      <%else%>
+          <h3> <%=product.name%>
+          <p> <%=product.category.name%>
+      <%end%>
+
+      <p> Price: <%= number_to_currency product.price%> </p>
+      <p> Desc:  <%= product.description%>   </p>
     </div>
+
