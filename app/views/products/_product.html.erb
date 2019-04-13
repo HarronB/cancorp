@@ -2,11 +2,11 @@
 
     <div class ="prods">
       <% if show_links %>
-          <h3> <%=link_to product.name, product%>
+          <h3> <%=link_to product.name, product%>  </h3>
           <p> <%= link_to product.category.name, product.category%>
       <%else%>
-          <h3> <%=product.name%>
-          <p> <%=product.category.name%>
+          <h3> <%=product.name%>  </h3>
+          <p> <%=product.category.name%> </p>
       <%end%>
 
       <p> Price: <%= number_to_currency product.price%> </p>
