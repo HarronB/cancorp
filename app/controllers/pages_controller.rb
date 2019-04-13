@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class PagesController < ApplicationController
-  http_basic_authenticate_with name: 'dhh', password: 'secret'
   before_action :set_page, only: %i[show edit update destroy]
 
   # THE REQUIRED ACTION FOR about-us STATIC PAGE
