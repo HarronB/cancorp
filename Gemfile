@@ -39,9 +39,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'
 gem 'activeadmin'
 gem 'devise'
-gem 'kaminari'
+#gem 'kaminari'
 gem 'will_paginate', '~> 3.1.0'
 
 
