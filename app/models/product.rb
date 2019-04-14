@@ -11,6 +11,5 @@ class Product < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
-
   default_scope { where(active: true) }
 end

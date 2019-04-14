@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'order_products/create'
+  get 'order_products/update'
+  get 'order_products/destroy'
+  get 'carts/show'
   resources :pages
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -18,6 +22,9 @@ Rails.application.routes.draw do
   resources :customers, only: %i[index show]
   resources :orders, only: %i[index show]
   resources :categories, only: %i[index show]
+
+  resource :cart, only: [:show]
+  resources :order_items, only: [:create, :update, :destroy]
 
   get 'search_results', to: 'search#results', as: 'search_results' # route for seach results
   get 'static/:permalink', to: 'pages#static', as: 'static'
