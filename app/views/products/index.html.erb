@@ -10,10 +10,18 @@
                       collection: @products,
                       locals: {show_links: true} %>
 
+
+<div class ="container text-center">
+  <% @products.each do |prod| %>
+    <% if prod.image.present? %>
+		  <p> <%= image_tag prod.image.thumbnail.url %> </p>
+  	<% end %>
+  <% end%>
+</div >
+
+
+
   <%= link_to_next_page @products, 'Next Page' %>
 <%= paginate @products %>
-
-
-
 
 
