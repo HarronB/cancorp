@@ -14,5 +14,5 @@
     </div>
 
 	<% if product.image.present? %>
-		<p> <%= image_tag product.image %> </p>
+		<p> <%= image_tag product.image.thumbnail.url %> </p>
 	<% end %>
