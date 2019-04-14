@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   resources :categories, only: %i[index show]
 
   resource :cart, only: [:show]
-  resources :order_items, only: [:create, :update, :destroy]
+  resources :order_items, only: %i[create update destroy]
 
   get 'search_results', to: 'search#results', as: 'search_results' # route for seach results
   get 'static/:permalink', to: 'pages#static', as: 'static'

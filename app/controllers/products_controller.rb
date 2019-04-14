@@ -3,6 +3,7 @@
 class ProductsController < ApplicationController
   def index
     @products = Product.includes(:category).paginate(page: params[:page], per_page: 10).order(:name)
+    @order_item = current_order.order_products.new
   end
 
   def show
