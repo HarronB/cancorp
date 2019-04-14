@@ -8,4 +8,6 @@ class Product < ApplicationRecord
 
   validates :name, :price, :description, presence: true
   validates :price, numericality: true
+
+  mount_uploader :image, ImageUploader
 end

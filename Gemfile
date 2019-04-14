@@ -44,6 +44,7 @@ gem 'activeadmin'
 gem 'devise'
 #gem 'kaminari'
 gem 'will_paginate', '~> 3.1.0'
+gem 'carrierwave'
 
 
 group :development, :test do
