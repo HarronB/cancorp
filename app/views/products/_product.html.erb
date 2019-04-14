@@ -12,7 +12,3 @@
       <p> Price: <%= number_to_currency product.price%> </p>
       <p> Desc:  <%= product.description%>   </p>
     </div>
-
-	<% if product.image.present? %>
-		<p> <%= image_tag product.image.thumbnail.url %> </p>
-	<% end %>
