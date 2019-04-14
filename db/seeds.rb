@@ -13,6 +13,7 @@ Order.destroy_all
 Customer.destroy_all
 Product.destroy_all
 Category.destroy_all
+OrderStatus.delete_all
 
 # can only ask for what they have
 # if they have 8 housees, can only call for 8 qunieq
@@ -27,7 +28,14 @@ Category.destroy_all
   end
 end
 
+OrderStatus.create! id: 1, name: "In Progress"
+OrderStatus.create! id: 2, name: "Placed"
+OrderStatus.create! id: 3, name: "Shipped"
+OrderStatus.create! id: 4, name: "Cancelled"
+
+
 puts "Number of products: #{Product.count}"
 puts "Number of cats: #{Category.count}"
+puts "Number of Ststus: #{OrderStatus.count}"
 
 AdminUser.create!(email: 'admin2@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
