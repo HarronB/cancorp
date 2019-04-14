@@ -10,4 +10,7 @@ class Product < ApplicationRecord
   validates :price, numericality: true
 
   mount_uploader :image, ImageUploader
+
+
+  default_scope { where(active: true) }
 end
