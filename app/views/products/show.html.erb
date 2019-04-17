@@ -2,6 +2,9 @@
 <p>Find me in app/views/products/show.html.erb</p>
 
 
+<%= link_to 'Back', request.headers['HTTP_REFERER'],class: "btn btn-primary" %>
+
+
 
            <%= render partial: 'products/product',
                       object: @product,

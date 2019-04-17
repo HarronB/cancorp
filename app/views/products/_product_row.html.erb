@@ -2,7 +2,7 @@
 
   <div class="row">
     <div class="col-xs-8">
-      <h4><%= product.name %></small></h4>
+      <h4><%=link_to product.name, product%></small></h4>
     </div>
     <div class="col-xs-4">
 
@@ -17,6 +17,9 @@
         </div>
       <% end %>
     </div>
-
+        <% if product.image.present? %>
+          <p> <%=  image_tag product.image.thumbnail.url, class: "rounded", alt: " Product #{product.name} " %> </p>
+        <% end %>
   </div>
+  <p class= "text-right"><%= link_to product.category.name, product.category%> </p>
 </div>

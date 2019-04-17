@@ -2,7 +2,7 @@
 <p>Find me in app/views/categories/show.html.erb</p>
 
 
-
+<%= link_to 'Back', request.headers['HTTP_REFERER'],class: "btn btn-primary" %>
 
 
 <h2><%= @category.name %> </h2>

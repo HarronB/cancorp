@@ -2,32 +2,17 @@
 <p>Find me in app/views/products/index.html.erb</p>
 
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
-<h2> List of Products </h2>
+<h2 class="text-center"> List of Products </h2>
 
-           <%= render partial: 'products/product',
-                      collection: @products,
-                      locals: {show_links: true} %>
 
-<div class ="container text-center">
-  <% @products.each do |prod| %>
-    <% if prod.image.present? %>
-		  <p> <%= image_tag prod.image.thumbnail.url %> </p>
-  	<% end %>
-  <% end%>
-</div >
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-<h1> test CART area </h1>
 <h3 class="text-center">Products for Sale</h3>
 
 <div class="row">
   <div class="col-xs-6 col-xs-offset-3">
     <% @products.each do |product| %>
-      <%= render "product_row", product: product, order_product: @order_product %>
+      <%= render "product_row", product: product, order_product: @order_product,  locals: {show_links: false} %>
     <% end %>
   </div>
 </div>
