@@ -22,6 +22,9 @@
         </div>
         <h4 class="text-right">Total Price: <span style="color: green"><%= number_to_currency order_product.total_price %></span></h4>
       <% end %>
+             <% if product.image.present? %>
+                <p> <%=  image_tag product.image.thumbnail.url, class: "img-circle", alt: " Product #{product.name} " %> </p>
+              <% end %>
     </div>
 
   </div>
