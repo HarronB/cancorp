@@ -38,4 +38,4 @@ puts "Number of products: #{Product.count}"
 puts "Number of cats: #{Category.count}"
 puts "Number of Ststus: #{OrderStatus.count}"
 
-AdminUser.create!(email: 'admin7@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+AdminUser.create!(email: 'admin8@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

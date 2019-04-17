@@ -3,7 +3,7 @@
     <div class ="container text-center">
       <% if show_links %>
           <h3> <%=link_to product.name, product%>  </h3>
-          <p> <%= link_to product.category.name, product.category%>
+          <p> <%= link_to product.category.name, product.category%> </p>
       <%else%>
           <h3> <%=product.name%>  </h3>
           <p> <%=product.category.name%> </p>
@@ -14,3 +14,6 @@
 
 
     </div>
+
+
+    <%# CAN DELTE THIS PARTIAL. _product_row.html.erb     is used instead. This is info has been transfered over  %>

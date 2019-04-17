@@ -11,5 +11,6 @@ class Product < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
+  # displays product with active status. So esentially , in stock.
   default_scope { where(active: true) }
 end
