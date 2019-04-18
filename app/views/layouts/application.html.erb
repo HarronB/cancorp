@@ -27,15 +27,35 @@
   </head>
 
   <body>
-   <header>
-      <h1> Welcome To CanCorp </h1>
-        <nav>
-          <ul>
-            <li  class = 'd-inline-block'> <%= link_to 'Home', root_path %></li>
-            <li  class = 'd-inline-block'><%= link_to 'Products', products_path %> </li>
-            <li  class = 'd-inline-block'><%= link_to 'Categories', categories_path %> </li>
-            <li  class = 'd-inline-block', padding = "32px"><%= link_to 'About Us', static_path(permalink: 'about-us') %> </li>
-          </ul>
+   <header class="navbar navbar-expand-md bg-dark navbar-dark">
+      <h1 class ='mh1'> Welcome To CanCorp </h1>
+
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+          <!-- Brand -->
+          <a class="navbar-brand" href="#">Navbar</a>
+
+          <!-- Toggler/collapsibe Button -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navbar links -->
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <%= link_to 'Home', root_path, class: 'nav-link' %>
+              </li>
+              <li class="nav-item">
+                <%= link_to 'Products', products_path, class: 'nav-link' %>
+              </li>
+              <li class="nav-item">
+                <%= link_to 'Categories', categories_path, class: 'nav-link' %>
+              </li>
+              <li class="nav-item">
+                <%= link_to 'About Us', static_path(permalink: 'about-us'),class: 'nav-link'  %>
+              </li>
+            </ul>
+          </div>
         </nav>
     </header>
 
@@ -50,10 +70,10 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-6">
-        <h1><%= link_to "My Store", root_path %></h1>
-          <h4> Categories </h4>
+        <h1 class='mh1'><%= link_to "My Store", root_path %></h1>
+          <h4 class='mh4'> Categories </h4>
             <% Category.all.each do |category| %>
-              <li class = 'd-inline-block' ><%= link_to category.name, category %> </li>
+              <li class = 'catList' ><%= link_to category.name, category %> </li>
             <% end %>
       </div>
       <div class="col-xs-6 text-right">
