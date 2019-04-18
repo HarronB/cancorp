@@ -7,23 +7,17 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-
-
-<%# this below was added for shopping cart %>
-    <title>ShoppingCartExample</title>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <% if request.ssl? %>
-    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
-    <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' %>
-  <% else %>
-    <%= stylesheet_link_tag 'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
-    <%= javascript_include_tag 'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' %>
-  <% end %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-
-  <%= csrf_meta_tags %>
-
+  <%# this below was dded for shopping cart %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <% if request.ssl? %>
+      <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
+      <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' %>
+    <% else %>
+      <%= stylesheet_link_tag 'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' %>
+      <%= javascript_include_tag 'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' %>
+    <% end %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
@@ -32,7 +26,7 @@
 
         <nav class="navbar navbar-expand-md bg-dark navbar-dark">
           <!-- Brand -->
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="#">NAVITGATION</a>
 
           <!-- Toggler/collapsibe Button -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -72,9 +66,11 @@
       <div class="col-xs-6">
         <h1 class='mh1'><%= link_to "My Store", root_path %></h1>
           <h4 class='mh4'> Categories </h4>
+            <ul>
             <% Category.all.each do |category| %>
               <li class = 'catList' ><%= link_to category.name, category %> </li>
             <% end %>
+            </ul>
       </div>
       <div class="col-xs-6 text-right">
         <h1 class="cart-text"><%= render 'layouts/cart_text' %></h1>
