@@ -11,11 +11,9 @@
 
       <p> Price: <%= number_to_currency product.price%> </p>
       <p> Desc:  <%= product.description%>   </p>
-
+      <% if show_links %>
         <% if product.image.present? %>
           <p> <%=  image_tag product.image.thumbnail.url, class: "img-circle", alt: " Product #{product.name} " %> </p>
         <% end %>
+       <% end %>
     </div>
-
-
-    <%# CAN DELTE THIS PARTIAL. _product_row.html.erb     is used instead. This is info has been transfered over  %>
