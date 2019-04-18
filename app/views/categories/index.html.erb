@@ -1,6 +1,12 @@
+<%= render_breadcrumbs :separator => ' > ' %>
+
 <h1> Categories </h1>
 <ul>
   <% @categories.each do |category| %>
     <li class = 'catindex'> <%= link_to category.name, category%> </li>
   <% end%>
 </ul>
+
+
+
+

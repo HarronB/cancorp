@@ -18,7 +18,7 @@
 		<p> <%= image_tag @product.image.large.url %> </p>
 	<% end %>
   </div>
-
+<%= render_breadcrumbs :separator => ' > ' %>
 
 <%# can include number of times ordered.      product.orders.count %>
 

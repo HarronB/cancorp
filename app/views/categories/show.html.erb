@@ -1,15 +1,14 @@
-<h1>Categories#show</h1>
-<p>Find me in app/views/categories/show.html.erb</p>
+<%= render_breadcrumbs :separator => ' > ' %>
 
 
-<%= link_to 'Back', request.headers['HTTP_REFERER'],class: "btn btn-primary" %>
 
 
-<h2><%= @category.name %> </h2>
+<h1><%= @category.name %> </h1>
 
   <ul>
     <% @category.products.each do |prod|%>
-      <li> <%= link_to prod.name, prod%> </li>
+      <h4> <%= link_to prod.name, prod%> </h4>
     <%end%>
   </ul>
+
 
