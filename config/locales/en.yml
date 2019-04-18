@@ -33,6 +33,7 @@
 en:
   breadcrumbs:
     homepage: Homepage
-    first: First
-    second: Second
-    third: Third
+    first: Categories
+    second: SubCat
+    third: Product
+    fourth: fourth
