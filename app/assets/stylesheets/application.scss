@@ -28,9 +28,14 @@ header {
   font-weight: bold;
 }
 
-.mh1 {
+.nav-item {
+  font-size: 20px;
   font-weight: bold;
-  text-shadow: 2px 2px black ;
+}
+.mh1 {
+  font-size: 44px;
+  font-weight: bold;
+  text-shadow: 2px 2px grey ;
 }
 
 .mh4 {
@@ -47,8 +52,22 @@ header {
   text-shadow: 1px 1px black ;
 }
 
+li:hover {
+  font-weight: bolder;
+  color: red;
+}
 
 .catList {
       display: inline-block;
-      font-size: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      padding-right: 20px;
+}
+
+
+.catindex {
+  font-size: 26px;
+  font-weight: bold;
+  display: block;
+  text-shadow: 2px 2px black;
 }
