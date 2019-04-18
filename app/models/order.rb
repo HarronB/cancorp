@@ -3,6 +3,7 @@
 class Order < ActiveRecord::Base
   belongs_to :order_status
   has_many :order_products
+  has_many :products, through: :order_products
   before_validation :set_order_status, on: :create
   # before_create :set_order_status
   before_save :update_subtotal
